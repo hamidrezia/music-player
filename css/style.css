@@ -1,0 +1,374 @@
+@font-face {
+  font-family: custom-font;
+  src: url(../font/yekan/Yekan.woff) format(woff),
+    url(../font/yekan/Yekan.woff2) format(woff2),
+    url(../font/yekan/Yekan.ttf) format(ttf);
+}
+@font-face {
+  font-family: "custom-font2";
+  src: url(../font/vazir/Vazir-Bold.woff) format(woff),
+    url(../font/vazir/Vazir-Bold.woff2) format(woff2);
+}
+@font-face {
+  font-family: "custom-font3";
+  src: url(../font/sans/Sans-Medium.ttf) format(ttf),
+    url(../font/sans/Sans-Regular.ttf) format(ttf);
+}
+* {
+  box-sizing: border-box;
+  font-family: custom-font2;
+}
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #111;
+  color: #fff;
+direction: rtl;
+}
+.hidden {
+  display: none;
+}
+header h1{
+text-align: center;
+color: rgb(207, 110, 163);
+font-size: 40px;
+font-weight: 600;
+letter-spacing: 6px;
+}
+header h2{
+  margin-right: 25px;
+  letter-spacing: 3px;
+}
+.space{
+  display: block;
+  width: 90%;
+  height: 270px;
+}
+section{
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 2.5rem;
+  margin-bottom: 2.5rem;
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 0.95rem;
+}
+.image-music{
+  width: 150px;
+  height: 150px;
+}
+.music{
+  background-color: black;
+  width: inherit;
+  height: 250px;
+  text-align: center;
+  padding-top: 20px;
+   border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px; 
+}
+.header{
+  position: relative;
+  overflow: hidden;
+}
+.hover-show{
+  position: absolute;
+  top: -25px;
+  left: 11%;
+  padding: 75px;
+  background-color: rgba(0, 0, 0, 0.028);
+  backdrop-filter: blur(2px);
+  border: 1px black;
+  opacity: 0;
+}
+.hover-show:hover{
+  opacity: 1;
+}
+.hover-show i{
+  color: #fff;
+  font-size: 35px;
+  width: 50px;
+  height: 50px;
+  padding-left: 10px;
+    padding-top: 8px;
+  background-color: #0c9f43 ;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+.src-area{
+  width: 182px;
+  height: 175px;
+  position: absolute;
+  top: 16px;
+  left: 3%;
+}
+.src-area:hover{
+  cursor: pointer;
+}
+.fa-solid{
+font-weight:900 ;
+padding-right: 10px;
+color: rgb(255, 0, 179);
+}
+footer{
+  background-color: black;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 100px;
+  display: flex;
+  justify-content: space-around;
+}
+.rotate {
+  transform: rotateY(180deg);
+  -webkit-transform: rotateY(180deg);
+  -moz-transform: rotateY(180deg);
+  -ms-transform: rotateY(180deg);
+  -o-transform: rotateY(180deg);
+}
+.play-forward-btn button{
+  background-color: black;
+  border: black;
+  color: #fff;
+  margin-top: 20px;
+  
+}
+.back-forward{
+  margin-right: 19px;
+}
+.play-forward-btn button:hover {
+  cursor: pointer;
+}
+.play-forward-btn .play-icon{
+  color: #fff;
+  font-weight: 900;
+  font-size: 27px;
+}
+.play-forward-btn .fa-forward{
+  color: #666;
+  font-weight: 900;
+  font-size: 20px;
+}
+.music:hover{
+  cursor: pointer;
+}
+.music-range{
+  width:500px ;
+  height: 5px;
+  background-color: #333;
+  margin-top: 20px;
+  bottom: 0;
+  position: relative;
+  direction: ltr;
+  overflow: hidden;
+  border-radius: 60px;
+  -webkit-border-radius: 60px;
+  -moz-border-radius: 60px;
+  -ms-border-radius: 60px;
+  -o-border-radius: 60px;
+}
+.music-range:hover{
+  cursor: pointer;
+}
+.second-music{
+  width:0% ;
+  height: 5px;
+  background-color: #fff;
+  position: absolute;
+  z-index: 3;
+}
+.center{
+display: flex;
+flex-direction: column;
+text-align: center;
+}
+.controller button {
+background-color: black;
+border: 2px black;
+}
+.size-5{
+  color: #fff;
+  width: 20px;
+  height: 20px;
+  margin-top: 10px;
+  margin-left: 5px;
+}
+.controller{
+  direction: ltr;
+  display: flex;
+  margin-top: 20px;
+}
+.volume-range{
+  width:100px ;
+  height: 3px;
+  background-color: #333;
+  margin-top: 20px;
+  bottom: 0;
+  position: relative;
+  direction: ltr;
+  overflow: hidden;
+  border-radius: 60px;
+  -webkit-border-radius: 60px;
+  -moz-border-radius: 60px;
+  -ms-border-radius: 60px;
+  -o-border-radius: 60px;
+}
+
+.volume-deg{
+  width:100px ;
+  height: 3px;
+  background-color: #fff;
+  position: absolute;
+  z-index: 3;
+}
+.volume-range:hover{
+  cursor: pointer;
+}
+.right{
+  display: flex;
+}
+.like{
+  background-color: black;
+border: 2px black;
+margin-top: 60px;
+margin-right: 50px;
+}
+.size-6{
+  width: 30px;
+  height: 30px;
+  color: rgb(207, 0, 0);
+}
+.size-6:hover{
+  cursor: pointer;
+}
+.size-5:hover{
+  cursor: pointer;
+}
+.dashboard{
+  width: 147px;
+}
+.dashboard p{
+color: #bbb;
+}
+.red-heart {
+  color: red;
+  font-size: 34px;
+}
+
+.volume{
+  color: #fff;
+  font-size: 18px;
+  margin-left: 10px;
+  padding-top: 7px;
+}
+.volume:hover{
+color: #bbb;
+cursor: pointer;
+}
+
+@media screen and (max-width:1100px) {
+  section{
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+  .like{
+    display: none;
+  }
+  .music-range{
+    width: 400px;
+  }
+
+}
+@media screen and (max-width:800px) {
+  section{
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+  .hover-show{
+    left: 8%;
+  }
+  .music-range{
+    width: 300px;
+  }
+  header h1{
+    font-size: 30px;
+  }
+  header h2{
+    font-size: 20px;
+  }
+  .device{
+    display: none;
+  }
+  .volume{
+    font-size: 12px;
+  }
+  .volume-range{
+    width: 77px;
+  }
+}
+@media screen and (max-width: 620px) {
+  section{
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .hover-show{
+    left: 3%;
+  }
+  .dashboard{
+    font-size: 10px;
+    padding-right: 10px;
+    width: 100px;
+    padding-top: 10px;
+  }
+}
+@media screen and (max-width: 545px) {
+  .volume{
+    margin-top: 9px;
+  }
+  .size-volume{
+    display: none;
+  }
+  .volume-range{
+    width: 50px;
+  }
+  .music-range{
+    width: 200px;
+  }
+}
+@media screen and (max-width: 400px) {
+  section{
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
+  .hover-show{
+    left: 23%;
+  }
+  header h1{
+    font-size: 25px;
+  }
+  header h2{
+    font-size: 15px;
+    letter-spacing: 1px;
+  }
+  .dashboard{
+    font-size: 8px;
+    width: 75px;
+    padding-top: 15px;
+  }
+  .music-range{
+    width: 160px;
+  }
+  .volume-range{
+    width: 40px;
+  }
+  .volume{
+    font-size: 7px;
+  }
+  .play-forward-btn .fa-play{
+    font-size: 15px;
+  }
+  .play-forward-btn .fa-forward{
+    font-size: 10px;
+  }
+}
