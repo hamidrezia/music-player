@@ -371,4 +371,7 @@ cursor: pointer;
   .play-forward-btn .fa-forward{
     font-size: 10px;
   }
+  .play-forward-btn .fa-pause{
+    font-size: 15px;
+  }
 }
